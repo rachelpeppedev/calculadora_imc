@@ -1,0 +1,62 @@
+.container {
+    text-align: center;
+    padding: 20px;    
+}
+
+header {
+    margin: 20px auto;
+    background-color: #007BFF;
+    color: white;
+    width: 50%;
+}
+
+form {
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+}
+
+input {
+    padding: 8px;
+    margin: 5px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.classifica {
+    margin: 20px auto;
+    background-color: #09094d;
+    color: white;
+    width: 50%;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+}
+
+td {
+    text-align: center;
+}
