@@ -8,10 +8,11 @@ const Calculadora = () => {
     const [classificacao, setClassificacao] = useState(0);
 
     const calculandoIMC = () => {
-        const imc = peso / (altura * altura);
+        const alturaMetros = altura/100;
+        const imc = peso / (alturaMetros * alturaMetros);
         const formatoIMC = imc.toFixed(2);
         setResultado (formatoIMC);
-        classificaIMC (classificacao);
+        classificaIMC (formatoIMC);
     };
 
     const classificaIMC = (formatoIMC) => {
@@ -34,7 +35,7 @@ const Calculadora = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        calculateIMC(peso, altura);
+        calculandoIMC(peso, altura);
     };
 
     return (
@@ -48,12 +49,12 @@ const Calculadora = () => {
                     <input
                         type="number"
                         value={peso}
-                        onChange={(e) => setPeso(e.target.value)}
+                        onChange={(e) => setPeso(e.target.value)}                        
                         placeholder="Peso (Kg)"
                     />
                 </label>
                 <label>
-                    Altura (cm)
+                    Altura (m)
                     <input
                         type="number"
                         value={altura}
